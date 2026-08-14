@@ -3,6 +3,7 @@ const team = [
   { name: "Nicaela", role: "Contributor" },
   { name: "Andrey", role: "Waiter" },
   { name: "Megan", role: "Chef" },
+  { name: "Rose", role: "Bartender" },
 ];
 
 function About(){
