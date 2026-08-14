@@ -1,0 +1,45 @@
+.menuItem {
+  background: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.itemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.itemHeader h3 {
+  margin: 0;
+  color: #333;
+}
+
+.price {
+  font-weight: bold;
+  color: #e74c3c;
+  font-size: 1.1em;
+}
+
+.description {
+  margin: 0 0 12px;
+  color: #666;
+  font-style: italic;
+  flex-grow: 1;
+}
+
+.hovering {
+  box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
+}
+
+@media (max-width: 600px) {
+  .itemHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
