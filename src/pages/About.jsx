@@ -1,5 +1,6 @@
 const team = [
   { name: "Martin", role: "Owner" },
+  { name: "Megan", role: "Chef" },
 ];
 
 function About(){
