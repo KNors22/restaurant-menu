@@ -4,6 +4,7 @@ const team = [
   { name: "Andrey", role: "Waiter" },
   { name: "Megan", role: "Chef" },
   { name: "Joseph", role: "Contributor" },
+  { name: "Mohsen", role: "Contributor" }
 ];
 
 function About(){
