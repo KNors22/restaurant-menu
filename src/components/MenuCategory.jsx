@@ -16,6 +16,7 @@ function MenuCategory({ category, items, onAddToCart }) {
             name={item.name}
             price={item.price}
             description={item.description}
+            dairyFree={item.dairyFree}
             onAddToCart={() => onAddToCart(item)}
           />
         ))}

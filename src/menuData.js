@@ -6,7 +6,8 @@ const menuData = [
         id: 1,
         name: 'Bruschetta al Pomodoro',
         price: 8.5,
-        description: 'Toasted bread topped with fresh tomato, basil, and garlic'
+        description: 'Toasted bread topped with fresh tomato, basil, and garlic',
+        dairyFree: true
       },
       {
         id: 2,
@@ -69,19 +70,22 @@ const menuData = [
         id: 9,
         name: 'Italian Soda',
         price: 3.5,
-        description: 'Sparkling water with your choice of fruit syrup'
+        description: 'Sparkling water with your choice of fruit syrup',
+        dairyFree: true
       },
       {
         id: 10,
         name: 'Espresso',
         price: 3.0,
-        description: 'Rich, bold shot of Italian roast espresso'
+        description: 'Rich, bold shot of Italian roast espresso',
+        dairyFree: true
       },
       {
         id: 11,
         name: 'Limonata',
         price: 3.5,
-        description: 'Freshly squeezed lemonade with a hint of mint'
+        description: 'Freshly squeezed lemonade with a hint of mint',
+        dairyFree: true
       }
     ]
   }
