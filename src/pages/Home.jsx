@@ -3,12 +3,14 @@ import menuData from '../menuData';
 import MenuCategory from '../components/MenuCategory';
 
 function Home(){
-    const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [cart, setCart] = useState([]);
   const [tableNumber, setTableNumber] = useState('');
   const [note, setNote] = useState('');
   const [confirmedNote, setConfirmedNote] = useState('');
+  const [kidsMode, setKidsMode] = useState(true);
+  const [funPoints, setFunPoints] = useState(0);
 
   const categoryNames = menuData.map(cat => cat.category);
 
@@ -34,10 +36,14 @@ function Home(){
   const cartTotal = cart.reduce((total, item) => total + item.price, 0)
 
   return (
-    <div className="App">
+    <div className={`App ${kidsMode ? 'kids-mode' : ''}`}>
       <header>
-        <h1>Bella Vita Trattoria</h1>
-        <p>Fresh, delicious food made with love</p>
+        <h1>{kidsMode ? '🍝 Bella Vita Play Kitchen' : 'Bella Vita Trattoria'}</h1>
+        <p>{kidsMode ? 'Tap, explore, and collect Yum points!' : 'Fresh, delicious food made with love'}</p>
+        <button type="button" onClick={() => setKidsMode(current => !current)}>
+          {kidsMode ? '🧸 Kids Mode: ON' : '👩‍🍳 Kids Mode: OFF'}
+        </button>
+        <p>⭐ Fun Points: {funPoints}</p>
 
         <input
           type="text"
@@ -102,6 +108,7 @@ function Home(){
             category={cat.category}
             items={cat.items}
             onAddToCart={handleAddToCart}
+            onYum={() => setFunPoints(points => points + 1)}
           />
         ))}
       </main>
