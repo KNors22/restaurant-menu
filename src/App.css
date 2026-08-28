@@ -91,6 +91,11 @@ header {
   font-size: 1.2em;
 }
 
+.cart-items {
+  margin: 0;
+  padding-left: 20px;
+}
+
 @media (max-width: 600px) {
   .App {
     padding: 12px;
