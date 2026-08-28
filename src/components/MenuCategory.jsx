@@ -1,6 +1,6 @@
 import MenuItem from './MenuItem'
 
-function MenuCategory({ category, items, onAddToCart }) {
+function MenuCategory({ category, items, onAddToCart, onYum }) {
   if (items.length === 0) {
     return null
   }
@@ -17,6 +17,7 @@ function MenuCategory({ category, items, onAddToCart }) {
             price={item.price}
             description={item.description}
             onAddToCart={() => onAddToCart(item)}
+            onYum={onYum}
           />
         ))}
       </div>

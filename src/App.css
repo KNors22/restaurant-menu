@@ -6,6 +6,19 @@
   text-align: left;
 }
 
+.kids-mode {
+  background: linear-gradient(180deg, #fff7db 0%, #ffe8ef 100%);
+}
+
+.kids-mode h1 {
+  color: #d35400;
+}
+
+.kids-mode .category-filters button.active {
+  background: #ff6b6b;
+  border-color: #ff6b6b;
+}
+
 header {
   text-align: center;
   margin-bottom: 40px;

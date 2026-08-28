@@ -3,9 +3,14 @@ import styles from './MenuItem.module.css' // css modules
 import Button from '@mui/material/Button' // material ui
 import {Link} from 'react-router-dom' // link, works like anchor tag <a>
 
-function MenuItem({ id, name, price, description, onAddToCart }) {
+function MenuItem({ id, name, price, description, onAddToCart, onYum }) {
   const [yumCount, setYumCount] = useState(0)
   const [isHovering, setIsHovering] = useState(false)
+
+  function handleYumClick() {
+    setYumCount(currentCount => currentCount + 1)
+    onYum?.()
+  }
 
   return (
     <div
@@ -18,7 +23,7 @@ function MenuItem({ id, name, price, description, onAddToCart }) {
         <span className={styles.price}>${price.toFixed(2)}</span>
       </div>
       <p className={styles.description}>{description}</p>
-      <button onClick={() => setYumCount(yumCount + 1)}>
+      <button onClick={handleYumClick}>
         😋 Yum! ({yumCount})
       </button>
       <Button variant="contained" color="error" onClick={onAddToCart}>
