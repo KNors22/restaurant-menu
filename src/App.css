@@ -30,14 +30,30 @@ header {
   border-radius: 5px;
 }
 
-.category-filters {
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-label {
+  color: #333;
+  font-size: 0.85em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.category-filters,
+.price-filters {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
 }
 
-.category-filters button {
+.category-filters button,
+.price-filters button {
   padding: 8px 16px;
   border: 1px solid #333;
   border-radius: 20px;
@@ -48,11 +64,13 @@ header {
   transition: background 0.2s, color 0.2s;
 }
 
-.category-filters button:hover {
+.category-filters button:hover,
+.price-filters button:hover {
   background: #f0f0f0;
 }
 
-.category-filters button.active {
+.category-filters button.active,
+.price-filters button.active {
   background: #333;
   color: white;
 }
@@ -63,6 +81,12 @@ header {
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 15px;
   margin-top: 20px;
+}
+
+.empty-menu-message {
+  color: #333;
+  font-weight: bold;
+  text-align: center;
 }
 
 .cart-summary {
