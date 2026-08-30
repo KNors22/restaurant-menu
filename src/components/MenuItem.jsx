@@ -14,7 +14,7 @@ function MenuItem({ id, name, price, description, dairyFree, onAddToCart }) {
       onMouseLeave={() => setIsHovering(false)}
     >
       <div className={styles.itemHeader}>
-        <h3><Link to={`/menu/${id}`}>{name}</Link>{dairyFree && <span className={styles.dfTag}>DF</span>}</h3>
+        <h3><Link to={`/menu/${id}`}>{name}</Link>{dairyFree && <span className={styles.dfTag} aria-label="Dairy-free" title="Dairy-free">DF</span>}</h3>
         <span className={styles.price}>${price.toFixed(2)}</span>
       </div>
       <p className={styles.description}>{description}</p>
