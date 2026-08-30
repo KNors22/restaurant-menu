@@ -107,8 +107,19 @@ function Home(){
       </main>
 
       <div className="cart-summary">
-        <h2>Your Cart ({cart.length})</h2>
-        <p className="cart-total">Total: ${cartTotal.toFixed(2)}</p>
+        <div>
+          <h2>Your Cart ({cart.length})</h2>
+          <p className="cart-total">Total: ${cartTotal.toFixed(2)}</p>
+        </div>
+        {cart.length > 0 && (
+          <ul className="cart-items">
+            {cart.map((item, index) => (
+              <li key={`${item.id}-${index}`}>
+                {item.name} - ${item.price.toFixed(2)}
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     </div>
   )
